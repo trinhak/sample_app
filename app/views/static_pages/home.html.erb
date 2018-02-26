@@ -1,0 +1,15 @@
+<% provide :title, t(".title") %>
+<!DOCTYPE html>
+<html>
+  <head>
+   <title><%= yield(:title) %> <%= t ".apptitle" %></title>
+  </head>
+  <body>
+    <h1><%= t(".title") %></h1>
+    <p>
+     <%= t(".body1") %>
+      <%= link_to t(".title_tut"), t(".url_tut") %>
+       <%= t ".body2" %>
+    </p>
+  </body>
+</html>
