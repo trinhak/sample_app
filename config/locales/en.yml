@@ -77,3 +77,11 @@ en:
       body: "Contact the Ruby on Rails Tutorial about the sample app at the"
       title_contact: "contact page"
       url_contact: "http://www.railstutorial.org/contact"
+  users:
+    new:
+      sign_up: "Sign up"
+      p_content: "This will be a signup page for new users."
+      create_account: "Create my account"
+      pass_confirm: "Confirmation"
+      create:
+      welcome: "Welcome to the Sample App!"
