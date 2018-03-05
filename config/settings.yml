@@ -2,5 +2,7 @@ user :
   name_length: 50
   email_length: 255
   password_length: 6
-  vavatar_size: 1
+  vavatar_size: 80
   remember: "1"
+  user_size: 50
+
