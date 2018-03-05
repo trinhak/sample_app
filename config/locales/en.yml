@@ -38,6 +38,11 @@ en:
       tab_home: "Home"
       tab_login: "Log in"
       tab_help: "Help"
+      user: "User"
+      profile: "Profile"
+      settings: "Settings"
+      tab_Logout: "Log out"
+      account: "Account"
     footer:
       title_tut: "Ruby on Rails Tutorial"
       url_tut: "http://www.railstutorial.org/"
@@ -89,3 +94,9 @@ en:
     error_messages:
       form_error: "The form contains"
       error: "error"
+  sessions:
+    new:
+      log_in: "Log in"
+      new_user: "New user?"
+      sing_up: "Sig up now!"
+      danger: "Invalid email/password combination"
