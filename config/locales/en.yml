@@ -100,3 +100,4 @@ en:
       new_user: "New user?"
       sing_up: "Sig up now!"
       danger: "Invalid email/password combination"
+      remember: "Remember me on this computer"
