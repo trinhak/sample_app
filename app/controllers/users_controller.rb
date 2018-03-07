@@ -1,7 +1,14 @@
 class UsersController < ApplicationController
-  def show
-    @user = User.find_by id: params[:id]
+  before_action :logged_in_user, expect: %i(show new create)
+  before_action :load_user, expect: %i(index new create)
+  before_action :correct_user, only: %i(edit update)
+  before_action :admin_user, only: :destroy
+
+  def index
+    @users = User.paginate page: params[:page]
   end
+
+  def show; end
 
   def new
     @user = User.new
@@ -11,16 +18,58 @@ class UsersController < ApplicationController
     @user = User.new user_params
     if @user.save
       log_in @user
-      flash[:success] = t(".welcome")
+      flash[:success] = t ".welcome"
       redirect_to @user
     else
       render :new
     end
   end
 
+  def edit; end
+
+  def update
+    if @user.update_attributes user_params
+      flash[:success] = t "users.edit.success"
+      redirect_to @user
+    else
+      render :edit
+    end
+  end
+
+  def destroy
+    if @user.destroy
+      flash[:success] = t ".success_destroy"
+    else
+      flash[:danger] = t ".deleted_fail"
+    end
+    redirect_to users_url
+  end
+
   private
 
   def user_params
     params.require(:user).permit :name, :email, :password, :password_confirmation
+  end
+
+  def load_user
+    @user = User.find_by id: params[:id]
+    @user || render(file: "public/404.html", status: 404, layout: true)
+  end
+
+  def logged_in_user
+    unless logged_in?
+      store_location
+      flash[:danger] = t "users.edit.logged_in_user"
+      redirect_to login_url
+    end
+  end
+
+  def correct_user
+    load_user
+    redirect_to root_url unless current_user? @user
+  end
+
+  def admin_user
+    redirect_to root_url unless current_user.admin?
   end
 end

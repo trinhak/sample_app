@@ -90,6 +90,22 @@ en:
       pass_confirm: "Confirmation"
     create:
       welcome: "Welcome to the Sample App!"
+    edit:
+      save: "Save changes"
+      edit_user: "Edit user"
+      update: "Update your profile"
+      changes: "Changes"
+      success: "Profile updated"
+      logged_in_user: "Please log in."
+      url_gravata: "http://gravatar.com/emails"
+    user:
+      delete_mess: "You sure?"
+      delete: "delete"
+    index:
+      title: "All users"
+    destroy:
+      success_destroy: "User deleted"
+      fail_destroy: "Delete fail"
   shared:
     error_messages:
       form_error: "The form contains"
@@ -99,5 +115,6 @@ en:
       log_in: "Log in"
       new_user: "New user?"
       sing_up: "Sig up now!"
-      danger: "Invalid email/password combination"
       remember: "Remember me on this computer"
+    create:
+       danger: "Invalid email/password combination"
