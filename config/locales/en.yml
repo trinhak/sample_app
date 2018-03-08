@@ -135,9 +135,29 @@ en:
       success_account: "Account activated!"
       danger_account: "Invalid activation link"
       subject: "Account activation"
+      password_reset: "Password reset"
     password_reset:
       greeting: "Hi"
       mail: "to@example.org"
       title: "User#password_reset"
       find_me: "find me in app/views/user_mailer/password_reset.html.erb"
-
+      body1: "To reset your password click the link below:"
+      body2: "This link will expire in two hours."
+      body3: "If you did not request your password to be reset, please ignore this email and
+              your password will stay as it is."
+      title: "Password reset"
+      reset_password: "Reset password"
+  password_resets:
+    new:
+      title: "Forgot password"
+      submit: "Submit"
+    create:
+      info: "Email sent with password reset instructions"
+      danger: "Email address not found"
+    edit:
+      title: "Reset password"
+      update_password: "Update password"
+    updated:
+      error: "can't be empty"
+      success: "Password has been reset."
+      danger_messages: "Password reset has expired"
