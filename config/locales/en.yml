@@ -90,6 +90,7 @@ en:
       pass_confirm: "Confirmation"
     create:
       welcome: "Welcome to the Sample App!"
+      check_mail: "Please check your email to activate your account."
     edit:
       save: "Save changes"
       edit_user: "Edit user"
@@ -116,5 +117,27 @@ en:
       new_user: "New user?"
       sing_up: "Sig up now!"
       remember: "Remember me on this computer"
+      password_reset: "(forgot password)"
     create:
-       danger: "Invalid email/password combination"
+      danger: "Invalid email/password combination"
+      message: "Account not activated. Check your email for the activation link."
+  mailers:
+    user:
+      subject: "Account activation"
+      greeting: "Hi"
+      mail: "to@example.org"
+  user_mailer:
+    account_activation:
+      title: "Sample App"
+      hi: "Hi"
+      body: "Welcome to the Sample App! Click on the link below to activate your account:"
+      activate: "Activate"
+      success_account: "Account activated!"
+      danger_account: "Invalid activation link"
+      subject: "Account activation"
+    password_reset:
+      greeting: "Hi"
+      mail: "to@example.org"
+      title: "User#password_reset"
+      find_me: "find me in app/views/user_mailer/password_reset.html.erb"
+
