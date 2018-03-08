@@ -5,4 +5,5 @@ user :
   vavatar_size: 80
   remember: "1"
   user_size: 50
+  hours: 2
 
