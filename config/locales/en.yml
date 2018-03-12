@@ -30,6 +30,9 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
+  i18l:
+    alert:
+      pls_choose: "Maximum file size is 5MB. Please choose a smaller file."
   layouts:
     application:
       apptitle: "Ruby on Rails Tutorial Sample App"
@@ -64,6 +67,7 @@ en:
       url_tut: "http://www.railstutorial.org/"
       sign_up: "Sign up now!"
       logo_alt: "rails logo"
+      title_micropost: "Micropost Feed"
     about:
       title: "About"
       body: "This is the sample application for the tutorial."
@@ -107,10 +111,18 @@ en:
     destroy:
       success_destroy: "User deleted"
       fail_destroy: "Delete fail"
+    show:
+      microposts: "Microposts"
   shared:
     error_messages:
       form_error: "The form contains"
       error: "error"
+    user_info:
+      view_my_profile: "view my profile"
+      micropost: "micropost"
+    micropost_form:
+     placeholder: "Compose new micropost..."
+     post: "Post"
   sessions:
     new:
       log_in: "Log in"
@@ -161,3 +173,15 @@ en:
       error: "can't be empty"
       success: "Password has been reset."
       danger_messages: "Password reset has expired"
+  microposts:
+    create:
+      success: "Micropost created!"
+      post: "Posted"
+      ago: "ago."
+      delete: "delete"
+      confirm: "You sure?"
+    destroy:
+      success: "Micropost deleted"
+      model: "should be less than 5MB"
+
+

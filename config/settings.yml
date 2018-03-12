@@ -6,4 +6,9 @@ user :
   remember: "1"
   user_size: 50
   hours: 2
-
+microposts :
+  content_maximum: 140
+  gravatar_for: 50
+  picture_size: 5
+shared:
+  current_user: 50
